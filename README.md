@@ -1,1 +1,1 @@
-# -Serverless-Architecture-Cloud-Automation-Assignment-
+# Serverless-Architecture-Cloud-Automation-Assignment
