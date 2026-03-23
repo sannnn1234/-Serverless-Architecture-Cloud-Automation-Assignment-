@@ -23,17 +23,15 @@ def get_instances_by_tag(ec2_client, tag_value):
 
 
 def lambda_handler(event, context):
-    ec2 = boto3.client('ec2', region_name='ap-south-1')  # change region as needed
+    ec2 = boto3.client('ec2', region_name='ap-south-1') 
 
-    # Stop instances tagged Auto-Stop
     stop_ids = get_instances_by_tag(ec2, 'Auto-Stop')
     if stop_ids:
         ec2.stop_instances(InstanceIds=stop_ids)
         logger.info(f"Stopped instances: {stop_ids}")
     else:
         logger.info("No running instances found with tag Auto-Stop")
-
-    # Start instances tagged Auto-Start
+        
     start_ids = get_instances_by_tag(ec2, 'Auto-Start')
     if start_ids:
         ec2.start_instances(InstanceIds=start_ids)
