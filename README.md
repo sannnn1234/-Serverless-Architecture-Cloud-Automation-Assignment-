@@ -10,6 +10,7 @@
    - Key: `Action` | Value: `Auto-Start`
 ```
 ![EC2 Architecture](https://raw.githubusercontent.com/sannnn1234/-Serverless-Architecture-Cloud-Automation-Assignment-/main/Assigment1/EC2.png)
+```
 ---
 
 ### Step 2: Create the IAM Role for Lambda
@@ -44,7 +45,7 @@
    ```
   ![Execution Results](https://raw.githubusercontent.com/sannnn1234/-Serverless-Architecture-Cloud-Automation-Assignment-/main/Assigment1/Lambda_Status.png)
    ```
-5. Go to **EC2 → Instances** and confirm:
+5. Go to **EC2 → Instances** 
    - The `Auto-Stop` instance is now `stopping` or `stopped`
    - The `Auto-Start` instance is now `pending` or `running`
 
