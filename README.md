@@ -45,14 +45,11 @@
    ```
   ![Execution Results](https://raw.githubusercontent.com/sannnn1234/-Serverless-Architecture-Cloud-Automation-Assignment-/main/Assigment1/Lambda_Status.png)
    ```
+---
 5. Go to **EC2 → Instances** 
    - The `Auto-Stop` instance is now `stopping` or `stopped`
    - The `Auto-Start` instance is now `pending` or `running`
 
 ---
 
-**Region**: Make sure the `region_name` in the code matches the region where your EC2 instances live — it's a very common gotcha.
 
-**Optional: Schedule with EventBridge** — once the manual test passes, you can automate it by adding an **EventBridge (CloudWatch Events) trigger** in the Lambda console with a cron expression like `cron(0 18 * * ? *)` to run every day at 6 PM UTC.
-
-For your GitHub repo, create the file as `lambda_function.py` in the root — that's exactly what Lambda expects as the entry point with the default handler name `lambda_function.lambda_handler`.
