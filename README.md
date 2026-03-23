@@ -81,4 +81,4 @@
 - AWS EC2
 - AWS Lambda
 - AWS IAM
-- Python 3.12
+- Python 3.14
