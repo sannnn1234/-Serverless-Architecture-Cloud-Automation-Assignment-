@@ -39,7 +39,7 @@
 2. Choose **Author from scratch**
 3. Configure:
    - **Function name:** `EC2AutoManager`
-   - **Runtime:** `Python 3.12`
+   - **Runtime:** `Python 3.14`
    - **Execution role:** Use existing role → `LambdaEC2ManagerRole`
 4. Click **Create function**
 5. Add the Lambda code and click **Deploy**
