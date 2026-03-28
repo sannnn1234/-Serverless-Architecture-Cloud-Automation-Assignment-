@@ -116,7 +116,7 @@ Ensure: - Some files are **older than 30 days** - Some files are
 
 Screenshot
 
-![S3 Files](aws-s3-cleanup-lambda/screenshots/S3 BUCKET.png)
+![S3 Files](https://github.com/sannnn1234/-Serverless-Architecture-Cloud-Automation-Assignment-/blob/main/aws-s3-cleanup-lambda/screenshots/S3%20BUCKET.png)
 
 ------------------------------------------------------------------------
 
@@ -135,7 +135,7 @@ LambdaS3CleanupRole
 
 Screenshot
 
-![IAM Role](aws-s3-cleanup-lambda/screenshots/S3 Cleanup Role.png)
+![IAM Role](aws-s3-cleanup-lambda/screenshots/S3%20Cleanup%20Role.png)
 
 ------------------------------------------------------------------------
 
@@ -149,7 +149,7 @@ Execution Role: LambdaS3CleanupRole
 
 Screenshot
 
-![Lambda Create](aws-s3-cleanup-lambda/screenshots/S3 Cleanup Lambda.png)
+![Lambda Create](aws-s3-cleanup-lambda/screenshots/S3%20Cleanup%20Lambda.png)
 
 ------------------------------------------------------------------------
 
@@ -200,10 +200,6 @@ def lambda_handler(event, context):
     }
 ```
 
-Screenshot
-
-![Lambda Code](aws-s3-cleanup-lambda/screenshots/lambda-code-s3.png)
-
 ------------------------------------------------------------------------
 
 # Step 5: Test Lambda
@@ -212,12 +208,7 @@ Screenshot
 2.  Click **Test**
 3.  Create test event
 
-Event Name: test
-
-Screenshot
-
-![Lambda Test](aws-s3-cleanup-lambda/screenshots/lambda-test-s3.png)
-
+Event Name: cleanupTest
 ------------------------------------------------------------------------
 
 # Step 6: Verify Results
