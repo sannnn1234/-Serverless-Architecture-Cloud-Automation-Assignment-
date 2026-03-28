@@ -16,7 +16,7 @@
    - **Value:** `Auto-Start`
 
 ### EC2 Instances Setup
-![EC2 Instances](https://raw.githubusercontent.com/sannnn1234/-Serverless-Architecture-Cloud-Automation-Assignment-/main/Assigment1/EC2.png)
+![EC2 Instances](https://raw.githubusercontent.com/sannnn1234/-Serverless-Architecture-Cloud-Automation-Assignment-/main/aws-ec2-lambda-automation/EC2.png)
 
 ---
 
@@ -64,7 +64,7 @@
 4. Verify the **Execution results**
 
 ### Lambda Execution Output
-![Lambda Execution Results](https://raw.githubusercontent.com/sannnn1234/-Serverless-Architecture-Cloud-Automation-Assignment-/main/Assigment1/Lambda_Status.png)
+![Lambda Execution Results](https://raw.githubusercontent.com/sannnn1234/-Serverless-Architecture-Cloud-Automation-Assignment-/main/aws-ec2-lambda-automation/Lambda_Status.png)
 
 ---
 
