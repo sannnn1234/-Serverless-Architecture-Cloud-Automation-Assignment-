@@ -314,8 +314,6 @@ Screenshot ![Event Target](aws-ec2-auto-tagging/screenshots/target.png)
 
 Launch EC2 instance
 
-Screenshot ![EC2 Launch](aws-ec2-auto-tagging/screenshots/ec2-launch.png)
-
 ------------------------------------------------------------------------
 
 # Step 8: Verify
