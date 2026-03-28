@@ -442,7 +442,7 @@ def lambda_handler(event, context):
 ```
 
 Screenshot:
-![Test Event](aws-sentiment-analysis/screenshots/testEvent.png)
+![Test Event](aws-sentiment-analysis/screenshots/test.png)
 
 ---
 
