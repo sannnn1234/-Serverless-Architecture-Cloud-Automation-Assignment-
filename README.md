@@ -116,7 +116,7 @@ Ensure: - Some files are **older than 30 days** - Some files are
 
 Screenshot
 
-![S3 Files](aws-s3-cleanup-lambda/screenshots/S3 BUCKET.png)
+![S3 Files](https://raw.githubusercontent.com/sannnn1234/-Serverless-Architecture-Cloud-Automation-Assignment-/main/aws-s3-cleanup-lambda/screenshots/S3 BUCKET.png)
 
 ------------------------------------------------------------------------
 
