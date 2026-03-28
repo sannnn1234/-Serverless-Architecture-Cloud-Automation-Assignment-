@@ -219,3 +219,120 @@ After running Lambda:
   -------------------- ---------
   Older than 30 days   Deleted
   Newer than 30 days   Remains
+------------------------------------------------------------------------
+
+# Assignment 5: Auto-Tagging EC2 Instances on Launch Using AWS Lambda and Boto3
+
+## Objective
+
+Automatically tag EC2 instances at launch using AWS Lambda.
+
+------------------------------------------------------------------------
+
+# Architecture
+
+EC2 Launch → EventBridge → Lambda → Auto Tagging
+
+------------------------------------------------------------------------
+
+# Step 1: EC2 Setup
+
+Go to AWS EC2 dashboard.
+
+Screenshot ![EC2 Dashboard](aws-ec2-auto-tagging/screenshots/ec2-auto-tag-instance.png)
+
+------------------------------------------------------------------------
+
+# Step 2: IAM Role
+
+Policy: AmazonEC2FullAccess
+
+Role Name: LambdaEC2AutoTagRole
+
+Screenshot ![IAM Role](aws-ec2-auto-tagging/screenshots/ec2-lambda-auto-tag-role.png)
+
+------------------------------------------------------------------------
+# Step 3: Lambda Function
+
+Function Name: auto-tagging-lambda-function\
+Runtime: Python 3.x
+
+Screenshot ![Lambda Create](aws-ec2-auto-tagging/screenshots/auto-tag-lambda.png)
+
+------------------------------------------------------------------------
+
+# Step 4: Code
+
+``` python
+import boto3
+from datetime import datetime
+
+ec2 = boto3.client('ec2')
+
+def lambda_handler(event, context):
+    instance_id = event['detail']['instance-id']
+    current_date = datetime.utcnow().strftime('%Y-%m-%d')
+    
+    ec2.create_tags(
+        Resources=[instance_id],
+        Tags=[
+            {'Key': 'LaunchDate', 'Value': current_date},
+            {'Key': 'Owner', 'Value': 'AutoTagLambda'}
+        ]
+    )
+    
+    print(f"Instance {instance_id} tagged with LaunchDate={current_date} and Owner=AutoTagLambda")
+    
+    return {
+        "status": "Tagging complete",
+        "instance_id": instance_id,
+        "tags": {
+            "LaunchDate": current_date,
+            "Owner": "AutoTagLambda"
+        }
+    }
+```
+------------------------------------------------------------------------
+
+# Step 5: EventBridge Rule
+
+Event: EC2 → State change → running
+
+Screenshot ![Event Rule](aws-ec2-auto-tagging/screenshots/auto-taggingec2-rule.png)
+
+------------------------------------------------------------------------
+
+# Step 6: Add Target
+
+Lambda: ec2autoTaggingInstanceRule
+
+Screenshot ![Event Target](aws-ec2-auto-tagging/screenshots/target.png)
+
+------------------------------------------------------------------------
+
+# Step 7: Test
+
+Launch EC2 instance
+
+Screenshot ![EC2 Launch](aws-ec2-auto-tagging/screenshots/ec2-launch.png)
+
+------------------------------------------------------------------------
+
+# Step 8: Verify
+
+Check Tags:
+
+LaunchDate → Date\
+
+------------------------------------------------------------------------
+
+# Step 9: CloudWatch Logs
+
+1.  Go to Lambda → Monitor
+2.  Click **View CloudWatch Logs**
+3.  Open latest log stream
+
+Screenshot ![EC2 Tags](aws-ec2-auto-tagging/screenshots/cloudwatch-auto-tag.png)
+
+------------------------------------------------------------------------
+
