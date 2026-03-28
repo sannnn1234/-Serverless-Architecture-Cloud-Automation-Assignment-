@@ -362,7 +362,7 @@ Automatically analyze and categorize the sentiment of user reviews using Amazon 
 5. Name: LambdaComprehendRole
 
 Screenshot:
-![IAM Role](assignment-sentiment-analysis/screenshots/lambda-com-role.png)
+![IAM Role](aws-sentiment-analysis/screenshots/lambda-com-role.png)
 
 ---
 
@@ -376,7 +376,7 @@ Screenshot:
 4. Assign IAM Role
 
 Screenshot:
-![Lambda Create](assignment-sentiment-analysis/screenshots/lambda-sentiment-analysis.png)
+![Lambda Create](aws-sentiment-analysis/screenshots/lambda-sentiment-analysis.png)
 
 ---
 
@@ -442,7 +442,7 @@ def lambda_handler(event, context):
 ```
 
 Screenshot:
-![Test Event](assignment-sentiment-analysis/screenshots/testEvent.png)
+![Test Event](aws-sentiment-analysis/screenshots/testEvent.png)
 
 ---
 
